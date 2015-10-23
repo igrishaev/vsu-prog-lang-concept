@@ -47,7 +47,7 @@ function nextParIdx(lexems, i) {
 function prevParIdx(lexems, i) {
     var lexem;
     var level = 0;
-    while (typeof (lexem = lexems[i]) !== 'undefined' ) {
+    while (typeof (lexem = lexems[i]) !== 'undefined') {
         if (')' === lexem) {
             level++;
         }
