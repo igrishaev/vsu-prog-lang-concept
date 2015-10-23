@@ -21,12 +21,10 @@ function isPar(chr) {
     return isOneOf('()', chr);
 }
 
-
 function parseNumber(lexem) {
     var parser = (lexem.indexOf('.') >= 0) ? parseFloat : parseInt
     return parser(lexem);
 }
-
 
 function nextParIdx(lexems, i) {
     var lexem;
