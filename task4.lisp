@@ -1,4 +1,4 @@
-(in-package 'COMMON-LISP-USER)
+(in-package :COMMON-LISP-USER)
 
 (defconstant +alphabet+ "0123456789abcdefghijklmnopqrstuvw")
 
