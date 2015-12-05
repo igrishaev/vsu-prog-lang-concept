@@ -3,11 +3,12 @@
 (defconstant +alphabet+ "0123456789abcdefghijklmnopqrstuvw")
 
 (defun rebase (num base &optional (items ()))
-  (multiple-value-bind (foo bar) (truncate num base)
-    (let ((items-next (cons (char +alphabet+ bar) items)))
-      (if (= foo 0)
+  (multiple-value-bind (div-part mod-part)
+      (truncate num base)
+    (let ((items-next (cons (char +alphabet+ mod-part) items)))
+      (if (= div-part 0)
           (format nil "~{~A~^~}" items-next)
-          (rebase foo base items-next)))))
+          (rebase div-part base items-next)))))
 
 (defun bin (num)
   (rebase num 2))
