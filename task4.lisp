@@ -5,7 +5,8 @@
 (defun rebase (num base &optional (items ()))
   (multiple-value-bind (div-part mod-part)
       (truncate num base)
-    (let ((items-next (cons (char +alphabet+ mod-part) items)))
+    (let* ((sym (char +alphabet+ mod-part))
+           (items-next (cons sym items)))
       (if (= div-part 0)
           (format nil "~{~A~^~}" items-next)
           (rebase div-part base items-next)))))

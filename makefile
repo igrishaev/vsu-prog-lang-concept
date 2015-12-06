@@ -1,4 +1,6 @@
-.PHONY: test test1 test2 test3 test4
+.PHONY: test test1 test2 test3 test4 all
+
+all: test
 
 test1:
 	node task1.js
