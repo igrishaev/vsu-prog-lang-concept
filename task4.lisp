@@ -2,7 +2,7 @@
 
 (defconstant +alphabet+ "0123456789abcdefghijklmnopqrstuvw")
 
-(defun rebase (num base &optional (items ()))
+(defun rebase (num base &optional items)
   (multiple-value-bind (div-part mod-part)
       (truncate num base)
     (let* ((sym (char +alphabet+ mod-part))
